@@ -12,12 +12,21 @@
 
         gtag('config', 'G-THLHBLL5F2');
     </script>
+    <script>
+        function onLinkClick(e) {
+            e.preventDefault();
+            if (!confirm('Более не связано с производством сыра / Not affiliated with cheese production anymore. Continue?')) {
+                return;
+            }
+            window.location = e.target.parentNode.href;
+        }
+    </script>
 </head>
 <body>
-<a href="mailto:hello@cheese.by">
+<a href="mailto:hello@cheese.by" onclick="onLinkClick(event)">
     <div class="bg"></div>
 </a>
-<a href="https://t.me/hitrov">
+<a href="https://t.me/hitrov" onclick="onLinkClick(event)">
     <img src="telegram.png" alt="">
 </a>
 </body>
